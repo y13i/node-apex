@@ -2,6 +2,13 @@
 // much λ, much UX.
 module.exports = function λ(fn) {
   return function(e, ctx, cb) {
+    if (e.debug) {
+      console.log(JSON.stringify({
+        event:   e,
+        context: ctx,
+      }));
+    }
+
     try {
       var v = fn(e, ctx, cb)
 
@@ -14,6 +21,10 @@ module.exports = function λ(fn) {
 
       cb(null, v)
     } catch (err) {
+      console.error(JSON.stringify({
+        error: err,
+      }));
+
       cb(err)
     }
   }

@@ -1,8 +1,8 @@
 {
-  "name": "apex.js",
+  "name": "@y13i/apex.js",
   "description": "λ improves AWS Lambda's UX with promises",
   "version": "2.0.0",
   "keywords": ["aws", "lambda", "λ", "apex"],
   "license": "MIT",
-  "repository": "https://github.com/apex/node-apex"
+  "repository": "https://github.com/y13i/node-apex"
 }
